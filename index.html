@@ -38,7 +38,7 @@
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
+			<ol class="slides">
 				<section>
 					<h3>ensure that ubuntu 14.04 has been installed correctly</h3>
 					<ol>
@@ -58,15 +58,40 @@
 				</section>
 
 				<section>
+					<h2>Ruby Version Manager</h2>
+					<p>
+						RVM is a command-line tool which allows you to easily install, manage, and work
+						with multiple ruby environments from interpreters to sets of gems.
+					</p>
+				</section>
+
+				<section>
 					<h2>install rvm</h2>
+					<ol style="text-align: left;">
+						<li><code>
+							gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+						</code></li>
+						</br>
+						<li><code>
+							\curl -sSL https://get.rvm.io | bash -s stable
+						</code></li>
+						<li><code>source /home/< username >/.rvm/scripts/rvm</code></li>
+					</ol>
+					</br>
+					<small>
+						GnuPG allows to encrypt and sign your data and communication, features a versatile key
+						management system as well as access modules for all kinds of public key directories.
+					</small>
 				</section>
 
 				<section>
 					<h2>install ruby latest version</h2>
+					<code>rvm install ruby</code>
 				</section>
 
 				<section>
 					<h2>check ruby version</h2>
+					<code></code>
 				</section>
 
 				<section>
