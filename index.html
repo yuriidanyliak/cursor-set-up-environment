@@ -40,158 +40,495 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<ol class="slides">
 				<section>
-					<h3>ensure that ubuntu 14.04 has been installed correctly</h3>
-					<ol>
-						<li class="fragment grow highlight-current-blue">
-							<code>
-								apt-get update</br>
-								apt-get install dkms</br>
-								apt-get install build-essential
-							</code>
-						</li>
-						</br>
-						<li class="fragment grow highlight-current-blue">
-							Go to the Devices menu and tell it to install the Guest Additions.
-							A new CDROM will appear on the desktop. Rightclick and choose the Autorun.
-						</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Ruby Version Manager</h2>
+					<h2>Integration testing</h2>
+					</br>
 					<p>
-						RVM is a command-line tool which allows you to easily install, manage, and work
-						with multiple ruby environments from interpreters to sets of gems.
+						Integration testing is a logical extension of unit testing.
+						In its simplest form, two units that have already been tested are
+						combined into a component and the interface between them is tested.
 					</p>
 				</section>
 
 				<section>
-					<h2>install rvm</h2>
-					<ol style="text-align: left;">
-						<li><code>
-							gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-						</code></li>
+					<h2>Integration testing</h2>
+					</br>
+					<p>
+						The purpose of integration testing is to verify the functional,
+						performance, and reliability between the modules that are integrated.
+					</p>
+				</section>
+
+				<section>
+					<h2>Integration testing strategies</h2>
+					</br>
+					<ol>
+						<li class="fragment grow highlight-current-blue">
+							Big-Bang Strategy
+						</li>
 						</br>
-						<li><code>
-							\curl -sSL https://get.rvm.io | bash -s stable
-						</code></li>
-						<li><code>source /home/< username >/.rvm/scripts/rvm</code></li>
+						<li class="fragment grow highlight-current-blue">
+							Top Down Strategy
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							Bottom Up Strategy
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							Hybrid Strategy
+						</li>
 					</ol>
+				</section>
+
+				<section>
+					<h2>Big-Bang Strategy</h2>
+					</br>
+					<ol>
+						<li class="fragment grow highlight-current-blue">
+							All components or modules are integrated simultaneously
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							Individual modules are not integrated until all the modules are ready
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							This approach is generally executed by those developers
+							who follows the ‘Run it and see’ approach.
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							Because of integrating everything at one time if any failures occurs
+							then it become very difficult for the programmers to know
+							the root cause of that failure.
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							In case any bug arises then the developers has to detach
+							the integrated modules in order to find the actual cause of the bug.
+						</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Top Down Strategy</h2>
+					</br>
+					<img src="https://www.tutorialspoint.com/software_testing_dictionary/images/stub.jpg">
+				</section>
+
+				<section>
+					<h2>Top Down Strategy</h2>
+					</br>
+					<ol>
+						<li class="fragment grow highlight-current-blue">
+							Top-down integration testing is an integration testing technique
+							used in order to simulate the behaviour of the lower-level modules
+							that are not yet integrated
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							Stubs are the modules that act as temporary replacement
+							for a called module and give the same output as that of the actual product
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							The replacement for the 'called' modules is known as 'Stubs'
+							and is also used when the software needs to interact with an external system
+						</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Bottom Up Strategy</h2>
+					</br>
+					<img src="https://www.tutorialspoint.com/software_testing_dictionary/images/bottom_up_testing.jpg">
+					</br>
+					<p>
+						Each component at lower hierarchy is tested individually
+						and then the components that rely upon these components are tested.
+					</p>
+				</section>
+
+				<section>
+					<h2>Hybrid Strategy</h2>
+					</br>
+					<img src="https://www.tutorialspoint.com/software_testing_dictionary/images/hybrid_integration_testing.jpg">
+					</br>
+					<p>
+						In Hybrid Integration Testing, we exploit the advantages of Top-down and Bottom-up approaches.
+						As the name suggests, we make use of both the Integration techniques.
+					</p>
+				</section>
+
+				<section>
+					<h2>Hybrid Strategy</h2>
+					</br>
+					<ol>
+						<li class="fragment grow highlight-current-blue">
+							It is viewed as three layers; viz - The Main Target Layer,
+							a layer above the target layer and a layer below the target layer.
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							Testing is mainly focussed for the middle level target layer and
+							is selected on the basis of system characteristics and the structure of the code.
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							Hybrid Integration testing can be adopted if the customer wants
+							to work on a working version of the application as soon as possible
+							aimed at producing a basic working system in the earlier stages of the development cycle.
+						</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Three Options for Top-Down Rails Testing</h2>
+					</br>
+					<ol>
+						<li class="fragment grow highlight-current-blue">
+							Controller tests
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							Integration tests
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							Acceptance tests
+						</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Controller tests</h2>
+					</br>
+					<ol>
+						<li class="fragment grow highlight-current-blue">
+							also known as 'functional tests'
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							also can be used as integration tests, especially as integration tests for backend
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							provide some kind of end-to-end testing (controller params as input
+							and http response code & name of rendered template as output)
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							good for API integration tests
+						</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Rails Integration test itself</h2>
+					</br>
+					<ol>
+						<li class="fragment grow highlight-current-blue">
+							they’re able to simulate complex interactions utilizing
+							more of the application stack
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							they feed simulated HTTP requests to the Rails Dispatcher
+							rather than through the controller
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							integration tests don’t map directly to any specific source file
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							from 5x to 10x slower, depending on test complexity
+						</li>
+					</ol>
+				</section>
+
+				<section>
+					<h4>Rails Integration test itself</h4>
+
+					<pre class="stretch"><code>
+class ShopperInteractionsTest < ActionDispatch::IntegrationTest
+  test "place order and check orders admin" do
+    shopper = login_as users(:user)
+    admin = login_as users(:administrator)
+
+    product = products(:rails_book)
+    shopper.post line_items_path, line_item: { product_id: product.id }
+    shopper.follow_redirect!
+    assert_equal root_path, shopper.path
+
+    order_params = {
+      name: "Chris Kottom",
+      address: "My house",
+      email: "chris@example.com",
+      pay_type: "Credit Card"
+    }
+    assert_difference "Order.count" do
+      shopper.post orders_path, order: order_params
+    end
+    shopper.follow_redirect!
+    assert_equal root_path, shopper.path
+
+    order = Order.last
+    admin.get orders_path
+    admin.assert_select "#orders #order_#{ order.id }" do
+      admin.assert_select "a[href=?]", order_path(order.id)
+    end
+  end
+end
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Acceptance Tests</h2>
+					</br>
+					<ol>
+						<li class="fragment grow highlight-current-blue">
+							allows to tests the WHOLE application including frontend
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							Tests are defined with a user-oriented API that mirrors the actions
+							a user would perform
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							includes script and stylesheet evaluation
+						</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Capybara</h2>
+					</br>
+					<ol>
+						<li class="fragment grow highlight-current-blue">
+							helps you test web applications by simulating how a real user
+							would interact with your app
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							Pluggable back-end drivers that give you several options ranging
+							from simple (markup only) to the full-featured (full evaluation of Javascript and CSS styles)
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							A slick, natural API that allows tests to be defined in language
+							that mimics user interaction with the browser
+						</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Capybara</h2>
+					</br>
+					<ol>
+						<li class="fragment grow highlight-current-blue">
+							Management of multiple sessions
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							Automatic following of redirect responses
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							Ability to follow external URLs
+						</li>
+					</ol>
+				</section>
+
+				<section>
+					<h4>Capybara: Code Example</h4>
+					<pre class="stretch"><code>
+RSpec.describe HomeController do
+  describe "contact form" do
+    before { visit '/' }
+
+    context "with valid message" do
+      it "sends the letter" do
+        within("#section6") do
+          fill_in "contact_message_name",    with: "Sergiy"
+          fill_in "contact_message_email",   with: 'sergey.kukunin@gmail.com'
+          select  "Just Saying Hi",           :from => "contact_message_subject"
+          fill_in "contact_message_body",    with: "Glad to meet you"
+        end
+
+        expect { click_on "SEND" }.to change { ActionMailer::Base.deliveries.count }.by(1)
+        expect(page).to have_content("Thank you for contacting us.")
+      end
+    end
+  end
+
+  describe "licenses" do
+    it "shows all licenses" do
+      visit licenses_path
+
+      expect(page).to have_selector "table", count: 2
+      expect(page).to have_selector "table:nth-child(1) tbody tr", count: 2
+      expect(page).to have_selector "table:nth-child(1) thead", text: 'CA'
+    end
+  end
+end
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Capybara: Setup</h2>
+					<ol>
+						<li class="fragment grow highlight-current-blue">
+							install phantomjs
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							In Gemfile
+							</br>
+						<pre><code>
+gem 'capybara'
+gem 'poltergeist'
+						</code></pre>
+						</li>
+						</br>
+						<li class="fragment grow highlight-current-blue">
+							In rails_helper:
+							</br>
+							<pre>
+								<code>
+require 'capybara/poltergeist'
+require 'capybara/rspec'
+
+Capybara.javascript_driver = :poltergeist
+								</code>
+							</pre>
+						</li>
+						</br>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Capybara: CheatSheet</h2>
+					</br>
+					<h4>
+						Navigation
+					</h4>
+					</br>
+					<pre><code>
+visit('/projects')
+visit(post_comments_path(post))
+					</code></pre>
+					</br>
+					</br>
+					</br>
+					</br>
+					</br>
 					</br>
 					<small>
-						GnuPG allows to encrypt and sign your data and communication, features a versatile key
-						management system as well as access modules for all kinds of public key directories.
+						More info: https://gist.github.com/zhengjia/428105
 					</small>
 				</section>
 
 				<section>
-					<h2>install ruby latest version</h2>
-					<code>rvm install ruby</code>
+					<h2>Capybara: Clicking links and buttons</h2>
+					</br>
+					<pre><code>
+click_link('id-of-link')
+click_link('Link Text')
+click_button('Save')
+click('Link Text') # Click either a link or a button
+click('Button Value')
+					</code></pre>
 				</section>
 
 				<section>
-					<h2>check ruby version</h2>
-					<code></code>
+					<h2>Capybara: Interaction with forms</h2>
+					</br>
+					<pre><code>
+fill_in('First Name', :with => 'John')
+fill_in('Password', :with => 'Seekrit')
+fill_in('Description', :with => 'Really Long Text…')
+choose('A Radio Button')
+check('A Checkbox')
+uncheck('A Checkbox')
+attach_file('Image', '/path/to/image.jpg')
+select('Option', :from => 'Select Box')
+					</code><pre>
 				</section>
 
 				<section>
-					<h2>install ruby 1.9.3</h2>
+					<h2>Capybara: Scoping</h2>
+					</br>
+					<pre><code>
+within("//li[@id='employee']") do
+	fill_in 'Name', :with => 'Jimmy'
+end
+
+within(:css, "li#employee") do
+	fill_in 'Name', :with => 'Jimmy'
+end
+
+within_fieldset('Employee') do
+	fill_in 'Name', :with => 'Jimmy'
+end
+
+within_table('Employee') do
+	fill_in 'Name', :with => 'Jimmy'
+end
+					</code></pre>
 				</section>
 
 				<section>
-					<h2>show rubies list</h2>
+					<h2>Capybara: Querying</h2>
+					</br>
+					<pre><code>
+page.has_xpath?('//table/tr')
+page.has_css?('table tr.foo')
+page.has_content?('foo')
+page.should have_xpath('//table/tr')
+page.should have_css('table tr.foo')
+page.should have_content('foo')
+page.should have_no_content('foo')
+find_field('First Name').value
+find_link('Hello').visible?
+find_button('Send').click
+find('//table/tr').click
+locate("//*[@id='overlay'").find("//h1").click
+all('a').each { |a| a[:href] }
+					</code></pre>
 				</section>
 
 				<section>
-					<h2>rvm gemset list</h2>
+					<h2>Capybara: Scripting</h2>
+					</br>
+					<pre><code>
+result = page.evaluate_script('4 + 4');
+					</code></pre>
+					<h2>Capybara: Debugging</h2>
+					</br>
+					<pre><code>
+save_and_open_page
+					</code></pre>
 				</section>
 
 				<section>
-					<h2>create new gemset</h2>
+					<h2>Capybara: XPath and CSS</h2>
+					</br>
+					<pre><code>
+within(:css, 'ul li') { ... }
+find(:css, 'ul li').text
+locate(:css, 'input#name').value
+
+Capybara.default_selector = :css
+within('ul li') { ... }
+find('ul li').text
+locate('input#name').value
+					</code></pre>
 				</section>
 
 				<section>
-					<h2>irb</h2>
-				</section>
-
-				<section>
-					<h2>create ruby source file</h2>
-				</section>
-
-				<section>
-					<h2>run simple ruby code</h2>
-				</section>
-
-				<section>
-					<h2>run simple ruby code (alternative ways)</h2>
-				</section>
-
-				<section>
-					<h2>print ruby version in the file</h2>
-				</section>
-
-				<section>
-					<h2>install git</h2>
-				</section>
-
-				<section>
-					<h2>push it to the github</h2>
-				</section>
-
-				<section>
-					<h2>install RubyMine</h2>
-				</section>
-
-				<section>
-					<h2>install Java if needed (required to install RubyMine)</h2>
-				</section>
-
-				<section>
-					<h2>install Rails</h2>
-				</section>
-
-				<section>
-					<h2>create new Rails app</h2>
-				</section>
-
-				<section>
-					<h2>run Rails server: howto</h2>
-				</section>
-
-				<section>
-					<h2>open Rails welcome page in browser</h2>
-				</section>
-
-				<section>
-					<h2>Gemfile</h2>
-				</section>
-
-				<section>
-					<h2>Gemfile.lock</h2>
-				</section>
-
-				<section>
-					<h2>add sample gem to gemfile</h2>
-				</section>
-
-				<section>
-					<h2>install bundler</h2>
-				</section>
-
-				<section>
-					<h2>bundle install</h2>
-				</section>
-
-				<section>
-					<h2>switch to another gemset</h2>
-				</section>
-
-				<section>
-					<h2>show that different gemsets contain different gems</h2>
-				</section>
-
-				<section>
-					<h2>bundle update</h2>
+					<img src="http://i.imgur.com/jRf48.jpg">
 				</section>
 			</div>
 		</div>
